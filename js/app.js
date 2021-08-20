@@ -48,3 +48,22 @@ document.getElementById('key-pad').addEventListener('click', function(event){
         calcInput.value = newCalc;
     }
 })
+
+
+
+
+// verifying Pin
+function verifyPin(){
+    const pin = document.getElementById('display-pin').value;
+    const typedNums = document.getElementById('typed-numbers').value;
+    const successMsg = document.getElementById('notify-success');
+    const errorMsg = document.getElementById('notify-error');
+    if (pin == typedNums){
+        successMsg.style.display = 'block';
+        errorMsg.style.display = 'none';
+    }
+    else {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+    }
+}
